@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bb48ce3e29d7ce62c92e9727547ade40
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - iFrente: {fileID: 2177579132197833962, guid: 1b6d466112d1e02b99e082ff48c796a4,
+      type: 3}
+  - iCostas: {fileID: -2261748671485672416, guid: 1b6d466112d1e02b99e082ff48c796a4,
+      type: 3}
+  - ilado: {fileID: -895181663272087366, guid: 1b6d466112d1e02b99e082ff48c796a4, type: 3}
+  - batata: {fileID: 6230755882027867543, guid: 1b6d466112d1e02b99e082ff48c796a4,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
