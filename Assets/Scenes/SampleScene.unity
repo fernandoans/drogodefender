@@ -5203,11 +5203,9 @@ MonoBehaviour:
   velocidade: 0.02
   tapForce: 0.5
   tiltSmooth: 5
+  subida: 0
   startPos: {x: 0, y: 0, z: 0}
-  esquerda: {fileID: 2177579132197833962, guid: 1b6d466112d1e02b99e082ff48c796a4,
-    type: 3}
-  direita: {fileID: -895181663272087366, guid: 1b6d466112d1e02b99e082ff48c796a4, type: 3}
-  cima: {fileID: -2261748671485672416, guid: 1b6d466112d1e02b99e082ff48c796a4, type: 3}
+  animator: {fileID: 1760897496}
 --- !u!95 &1760897496
 Animator:
   serializedVersion: 3

@@ -9,33 +9,41 @@ public class VooDragao : MonoBehaviour {
     public float velocidade;
     public float tapForce = 1;
     public float tiltSmooth = 5;
-    public Vector3 startPos;
+    public Animator animator;
+    private Vector3 posicao;
     private new SpriteRenderer renderer;
-    public Sprite esquerda, direita, cima;
-    private Rigidbody2D rigidbody;
+    Rigidbody2D drogoRB;
     private SpriteRenderer myRenderer;
 
     // Start is called before the first frame update
     void Start() {
         renderer = GetComponent<SpriteRenderer>();
-        rigidbody = GetComponent<Rigidbody2D>();
+        drogoRB = GetComponent<Rigidbody2D>();
+        animator.SetBool("esquerda", false);
 //        rigidbody.simulated = false;
     }
 
     // Update is called once per frame
     void Update() {
+        posicao = transform.position;
         if (Input.GetMouseButtonDown(0)) {
-            GetComponent<SpriteRenderer>().sprite = cima;
-            rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);
+            if (posicao.y > 4.2) {
+                transform.position = new Vector3(posicao.x, 4.2f, posicao.z);
+            } else {
+                drogoRB.AddForce(Vector2.up * tapForce, ForceMode2D.Force);
+            }
         }
         if (Input.GetKey("right")) {
-            transform.Translate(velocidade,0,0);
-            GetComponent<SpriteRenderer>().sprite = direita;
+            animator.SetBool("esquerda", false);
+            if (posicao.x < 8.33) {
+                transform.Translate(velocidade,0,0);
+            }
         } else if (Input.GetKey("left")) {
-            transform.Translate(-velocidade, 0, 0);
-            GetComponent<SpriteRenderer>().sprite = esquerda;
+            animator.SetBool("esquerda", true);
+            if (posicao.x > -8.33) {
+                transform.Translate(-velocidade, 0, 0);
+            }
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D col) {
@@ -44,16 +52,7 @@ public class VooDragao : MonoBehaviour {
         }
 
         if (col.gameObject.tag == "DeadZone") {
-            rigidbody.simulated = false;
+            drogoRB.simulated = false;
         }
     }  
-}
-
-[System.Serializable]
-public class SpriteCollection {
-    public string name;
-    public Texture sheet;
- 
-    [System.NonSerialized]
-    public Sprite[] sprites;
 }
