@@ -17,8 +17,12 @@ Diferente do jogo original (Missile Command) que era uma torre parada que atirav
 
 Ainda em fase de construção
 
-1. A animação deve respeitar o voo de Drogo para a esquerda e para direita. Atualmente só direita.
-2. Fazer cair os mísseis.
-3. Colocar o placar.
-4. Matar Drogo para terminar o jogo.
-5. Guardar o maior placar.
+### Checklist Atual
+1. Montagem da Tela -- Concluído.
+2. Animação do Ártico (simulação da neve) -- Concluído.
+3. Fazer o Drogo voar -- Concluído.
+4. A animação deve respeitar o voo de Drogo para a esquerda e para direita -- Concluído.
+5. Fazer cair os mísseis.
+6. Colocar o placar.
+7. Matar Drogo para terminar o jogo.
+8. Guardar o maior placar.
