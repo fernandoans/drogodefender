@@ -5203,8 +5203,6 @@ MonoBehaviour:
   velocidade: 0.02
   tapForce: 0.5
   tiltSmooth: 5
-  subida: 0
-  startPos: {x: 0, y: 0, z: 0}
   animator: {fileID: 1760897496}
 --- !u!95 &1760897496
 Animator:
