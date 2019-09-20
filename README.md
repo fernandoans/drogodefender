@@ -17,12 +17,19 @@ Diferente do jogo original (Missile Command) que era uma torre parada que atirav
 
 Ainda em fase de construção
 
+## 4. Movimentação
+
+Para movimentar o Dragão use as setas direcionais, Drogo deve se manter no ar para isso use a direcional para cima.
+
+Para atirar o "Fogo Azul" de Drogo contra os mísseis use a "Barra de Espaço". O "Fogo Azul" não percorre uma grande distância.
+
 ### Checklist Atual
 1. Montagem da Tela -- Concluído.
 2. Animação do Ártico (simulação da neve) -- Concluído.
 3. Fazer o Drogo voar -- Concluído.
 4. A animação deve respeitar o voo de Drogo para a esquerda e para direita -- Concluído.
-5. Fazer cair os mísseis.
-6. Colocar o placar.
-7. Matar Drogo para terminar o jogo.
-8. Guardar o maior placar.
+5. Fazer o Drogo atirar bolas de fogo -- Concluído.
+6. Fazer cair os mísseis.
+7. Colocar o placar.
+8. Matar Drogo para terminar o jogo.
+9. Guardar o maior placar.

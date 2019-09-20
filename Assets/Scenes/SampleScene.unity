@@ -5098,10 +5098,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.01
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5166,7 +5166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760897490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20695373, y: 0.36097464, z: -2.3384516}
+  m_LocalPosition: {x: -0.20695373, y: 0.954, z: -2.3384516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5204,6 +5204,9 @@ MonoBehaviour:
   tapForce: 0.5
   tiltSmooth: 5
   animator: {fileID: 1760897496}
+  fogoAzul: {fileID: 5081975345273442739, guid: aac300369db2c3a91b90d007a42631a0,
+    type: 3}
+  fogoForce: 200
 --- !u!95 &1760897496
 Animator:
   serializedVersion: 3

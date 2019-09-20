@@ -15,6 +15,9 @@ public class VooDragao : MonoBehaviour {
     Rigidbody2D drogoRB;
     private SpriteRenderer myRenderer;
 
+    public GameObject fogoAzul;
+    public float fogoForce;
+
     // Start is called before the first frame update
     void Start() {
         renderer = GetComponent<SpriteRenderer>();
@@ -26,24 +29,40 @@ public class VooDragao : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         posicao = transform.position;
-        if (Input.GetMouseButtonDown(0)) {
-            if (posicao.y > 4.2) {
-                transform.position = new Vector3(posicao.x, 4.2f, posicao.z);
-            } else {
-                drogoRB.AddForce(Vector2.up * tapForce, ForceMode2D.Force);
-            }
+//        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetKey("up")) {
+            drogoRB.AddForce(Vector2.up * 2, ForceMode2D.Force);
         }
+        if (posicao.y > 4.2) {
+            transform.position = new Vector3(posicao.x, 4.2f, posicao.z);
+        }
+
+        bool esq = animator.GetBool("esquerda");
         if (Input.GetKey("right")) {
-            animator.SetBool("esquerda", false);
+            esq = false;
+            animator.SetBool("esquerda", esq);
             if (posicao.x < 8.33) {
                 transform.Translate(velocidade,0,0);
             }
         } else if (Input.GetKey("left")) {
-            animator.SetBool("esquerda", true);
+            esq = true;
+            animator.SetBool("esquerda", esq);
             if (posicao.x > -8.33) {
                 transform.Translate(-velocidade, 0, 0);
             }
         }
+
+        // Verificar Fire1 para fazer fogoAzul
+        if (Input.GetButtonDown("Fire1")) {
+            GameObject newFogo = Instantiate(fogoAzul, transform.position, transform.rotation);
+            if (esq) {
+                newFogo.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * fogoForce);
+            } else {
+                newFogo.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * fogoForce);
+            }
+            Destroy(newFogo, 2.0f);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D col) {
