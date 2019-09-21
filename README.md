@@ -29,7 +29,8 @@ Para atirar o "Fogo Azul" de Drogo contra os mísseis use a "Barra de Espaço". 
 3. Fazer o Drogo voar -- Concluído.
 4. A animação deve respeitar o voo de Drogo para a esquerda e para direita -- Concluído.
 5. Fazer o Drogo atirar bolas de fogo -- Concluído.
-6. Fazer cair os mísseis.
-7. Colocar o placar.
-8. Matar Drogo para terminar o jogo.
-9. Guardar o maior placar.
+6. Montagem do Menu -- Concluído.
+7. Fazer cair os mísseis.
+8. Colocar o placar.
+9. Matar Drogo para terminar o jogo e retornar ao menu.
+10. Guardar o maior placar.
