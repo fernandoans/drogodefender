@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class VooDragao : MonoBehaviour {
 
+    public static VooDragao instance;
+
     public float velocidade;
     public float tapForce = 1;
     public float tiltSmooth = 5;
@@ -18,12 +20,21 @@ public class VooDragao : MonoBehaviour {
     public GameObject fogoAzul;
     public float fogoForce;
 
+    private bool startMoving = false;
+    public bool StartMoving { get { return startMoving; }}
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start() {
         renderer = GetComponent<SpriteRenderer>();
         drogoRB = GetComponent<Rigidbody2D>();
         animator.SetBool("esquerda", false);
-//        rigidbody.simulated = false;
+        startMoving = true;
     }
 
     // Update is called once per frame
@@ -32,6 +43,9 @@ public class VooDragao : MonoBehaviour {
 //        if (Input.GetMouseButtonDown(0)) {
         if (Input.GetKey("up")) {
             drogoRB.AddForce(Vector2.up * 2, ForceMode2D.Force);
+        }
+        if (Input.GetKey("down")) {
+            drogoRB.AddForce(Vector2.up * -1, ForceMode2D.Force);
         }
         if (posicao.y > 4.2) {
             transform.position = new Vector3(posicao.x, 4.2f, posicao.z);

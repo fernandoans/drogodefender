@@ -25,12 +25,12 @@ Para atirar o "Fogo Azul" de Drogo contra os mísseis use a "Barra de Espaço". 
 
 ### Checklist Atual
 1. Montagem da Tela -- Concluído.
-2. Animação do Ártico (simulação da neve) -- Concluído.
+2. Animação do Ártico (simulação da neve com som) -- Concluído.
 3. Fazer o Drogo voar -- Concluído.
 4. A animação deve respeitar o voo de Drogo para a esquerda e para direita -- Concluído.
 5. Fazer o Drogo atirar bolas de fogo -- Concluído.
 6. Montagem do Menu -- Concluído.
-7. Fazer cair os mísseis.
+7. Fazer cair os mísseis -- Concluído.
 8. Colocar o placar.
 9. Matar Drogo para terminar o jogo e retornar ao menu.
 10. Guardar o maior placar.

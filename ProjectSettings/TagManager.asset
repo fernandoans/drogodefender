@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Light
+  - Ground
+  - Enemy
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -47,4 +50,7 @@ TagManager:
     locked: 0
   - name: Snow
     uniqueID: 2199643447
+    locked: 0
+  - name: Misseis
+    uniqueID: 3483530585
     locked: 0

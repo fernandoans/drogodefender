@@ -4956,6 +4956,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &584020410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584020412}
+  - component: {fileID: 584020411}
+  m_Layer: 0
+  m_Name: Inimigos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &584020411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584020410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad723068bba07b15b64f0bfadc89b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xLimit: 7.16
+  xPositions:
+  - -6.9
+  - -3.6
+  - 0
+  - 3.6
+  - 6.9
+  enemyPrefabs:
+  - {fileID: 2857864139975758642, guid: f2e22d2a6e839e5899d694b8481cc9e2, type: 3}
+  - {fileID: 8195978749143336836, guid: 5e9c2db824918c8c8920a38dfe20804e, type: 3}
+  - {fileID: 7040756858819642564, guid: 258f847f897eb7133abb84ae642336d7, type: 3}
+  - {fileID: 2364367441814729461, guid: 0ed781f66443b241091a2847f7193638, type: 3}
+  wave:
+  - delayTime: 1
+    spawnAmount: 3
+  - delayTime: 3
+    spawnAmount: 2
+  - delayTime: 3
+    spawnAmount: 2
+  - delayTime: 5
+    spawnAmount: 1
+--- !u!4 &584020412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584020410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: 5.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874185170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,7 +5033,7 @@ GameObject:
   - component: {fileID: 874185171}
   m_Layer: 0
   m_Name: Chao
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5057,7 +5121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874185170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.23, z: -1}
+  m_LocalPosition: {x: 0.03, y: -4.17, z: 0}
   m_LocalScale: {x: 1.01, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5094,7 +5158,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5206,7 +5270,7 @@ GameObject:
   - component: {fileID: 1760897496}
   m_Layer: 0
   m_Name: Drogo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5290,7 +5354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760897490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20695373, y: 0.954, z: -2.3384516}
+  m_LocalPosition: {x: -0.21, y: 1.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5324,7 +5388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9c0a30fb9d6faeebfe28cd09f4c80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.02
+  velocidade: 0.04
   tapForce: 0.5
   tiltSmooth: 5
   animator: {fileID: 1760897496}
@@ -5422,7 +5486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003938331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 17.759937, y: 10.007056, z: 0}
   m_Children:
   - {fileID: 358327830}
